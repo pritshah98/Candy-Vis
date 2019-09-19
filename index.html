@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/> 
+		<link href="style.css" type="text/css" rel="stylesheet" />
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>	 
+   	</head>
+   	<body style="background-color:white;">
+	   <title>Candy!</title>
+		<h1>Chart of Favorite Candies!</h1>
+        <p> The radius of the circles are sized based on the number of people who feel joy, despair, or meh about each candy. Hover over the circles to see a specific candy, and use the search bar or filter button for more specific data about each candy!</p>
+		<div id="chart">
+			<strong>Joy:</strong> <span id="joy"></span><br/>
+			<strong>Despair:</strong> <span id="despair"></span><br/>
+			<strong>Meh:</strong> <span id="meh"></span><br/>
+	    </div>
+		<div id="chart2">
+		        <strong>Age < 18:</strong> <span id="age1"></span><br/>
+		        <strong>Age 18 - 30:</strong> <span id="age2"></span><br/>
+		        <strong>Age 30 - 50:</strong> <span id="age3"></span><br/>
+				<strong>Age > 50:</strong> <span id="age4"></span><br/>
+				<br/><strong>Male:</strong> <span id="male"></span><br/>
+				<strong>Female:</strong> <span id="female"></span><br/>
+                <strong>Other:</strong> <span id="other"></span><br/>
+	    </div>
+		<div id="attrib-labels">
+			<strong>Joy</strong> <span id="joy-label"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    <strong>Despair</strong> <span id="despair-label"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    <strong>Meh</strong> <span id="meh-label"></span>
+		</div>
+		<div id ='unfiltered-labels'>
+			<strong>Meh</strong> <span id="meh-unfilter-label"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    <strong>Despair</strong> <span id="despair-unfilter-label"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    <strong>Joy</strong> <span id="joy-unfilter-label"></span>
+		</div>
+		
+		<select id="dropdown">
+			<option value="butterfinger">Butterfinger</option>
+			<option value="candy_corn">Candy Corn</option>
+			<option value="chiclets">Chiclets</option>
+			<option value="dots">Dots</option>
+			<option value="fuzzy_peaches">Fuzzy Peaches</option>
+			<option value="goodnplenty">Good N Plenty</option>
+			<option value="gummy_bears">Gummy Bears</option>
+			<option value="healthy_fruit">Healthy Fruit</option>
+			<option value="heath_bar">Heath Bar</option>
+			<option value="hershey_dark">Hersheys Dark Chocolate</option>
+			<option value="hershey_milk">Hersheys Milk Chocolate</option>
+			<option value="kisses">Hersheys Kisses</option>
+			<option value="jolly_rancher">Jolly Ranchers</option>
+			<option value="junior_mints">Junior Mints</option>
+			<option value="kit_kat">Kit Kat</option>
+			<option value="laffy_taffy">Laffy Taffy</option>
+			<option value="lemon_heads">Lemon Heads</option>
+			<option value="licorice_nonblack">Non-black Licorice</option>
+			<option value="licorice_black">Black Licorice</option>
+			<option value="lollipops">Lollipops</option>
+			<option value="mikeandike">Mike and Ike</option>
+			<option value="milk_duds">Milk Duds</option>
+			<option value="milky_way">Milky Way</option>
+			<option value="mandms">M & Ms</option>
+			<option value="peanut_mandms">Peanut M & Ms</option>
+			<option value="mint_kisses">Mint Kisses</option>
+			<option value="mr_goodbar">Mr. Goodbar</option>
+			<option value="nerds">Nerds</option>
+			<option value="nestle_crunch">Nestle Crunch</option>
+			<option value="peeps">Peeps</option>
+			<option value="pixy_stix">Pixy Stix</option>
+			<option value="reeses">Reeses Peanut Butter Cups</option>
+			<option value="rolos">Rolos</option>
+			<option value="skittles">Skittles</option>
+			<option value="snickers">Snickers</option>
+			<option value="sourpatch">Sourpatch Kids</option>
+			<option value="starburst">Starburst</option>
+			<option value="swedish_fish">Swedish Fish</option>
+			<option value="tic_tacs">Tic Tacs</option>
+			<option value="three_musketeers">Three Musketeers</option>
+			<option value="toblerone">Toblerone</option>
+			<option value="trail_mix">Trail Mix</option>
+			<option value="twix">Twix</option>
+			<option value="watchamacallit">Watchamacallit Bars</option>
+			<option value="york">York Peppermint Patties</option>
+		</select>
+		<div id="graph"></div>
+	</body>
+	<form>
+		<label for="search" id="search-label">Search:</label>
+		<input type="text" id="search">
+	</form>
+</html>

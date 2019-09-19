@@ -1,0 +1,91 @@
+body {
+  	font: 12px sans-serif;
+}
+
+#dropdown {
+	box-sizing: content-box;
+	width: 20%;
+	padding: 6px 10px;
+	font-family: TheBoldFont;
+	font-size: 20px;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+#search {
+	box-sizing: content-box;
+	padding: 6px 10px;
+	font-family: TheBoldFont;
+	font-size: 20px;
+	border: 2px solid black;
+	border-radius: 12px;
+}
+
+#search-label {
+	box-sizing: content-box;
+	padding: 6px 10px;
+	font-family: TheBoldFont;
+	font-size: 20px;
+}
+
+#chart {
+	position: absolute;
+	font-size: 20px;
+	right: 550px;
+}
+
+#chart2 {
+	float:right;
+	margin-right: 500px;
+	font-size: 20px;
+}
+
+#button-reset {
+	font-size: 20px;
+	position: absolute;
+  	left: 400px;
+  	top: 120px;
+	border-radius: 12px;
+}
+
+#button-filter {
+	font-size: 20px;
+	position: absolute;
+  	left: 400px;
+  	top: 90px;
+	border-radius: 12px;
+}
+
+#button-search {
+	font-size: 20px;
+	border-radius: 12px;
+}
+
+#button-search:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#button-reset:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#button-filter:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#attrib-labels {
+	font-size: 25px;
+	text-decoration: underline;
+	position: absolute;
+	top: 150px;
+	left: 135px;
+}
+
+#unfiltered-labels {
+	font-size: 25px;
+/*	text-decoration: underline;*/
+	position: absolute;
+	top: 580px;
+	left: -195px;
+	transform: rotate(270deg);
+}
